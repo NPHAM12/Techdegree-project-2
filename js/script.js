@@ -4,11 +4,11 @@ FSJS project 2 - List Filter and Pagination
 Nguyen Pham
 ******************************************/
 const pageSize = 10;
-let nodeListStudent = document.querySelectorAll(".student-item");
+let nodeListStudent = document.getElementsByClassName("student-item");
 let arrayListStudent = Array.from(nodeListStudent);
 let student = arrayListStudent.length;
 totalPage = Math.ceil(student / pageSize);
-const mainPage = document.querySelector(".page");
+const mainPage = document.getElementsByClassName("page")[0];
 let div = document.createElement('div');
 let ul = document.createElement('ul');
 
@@ -27,7 +27,7 @@ function showLink(list) {
 
 // A function shows firt 10 students of the list
 function displayFirstTen(list, num) {
-  let current = document.querySelector('a');
+  let current = document.getElementsByTagName('a')[0];
   current.className = 'active'; // set the first page is active
   if (num <= pageSize) { // students < 10
     for (let i in list)
@@ -70,7 +70,7 @@ ul.addEventListener('click', (event) => {
     let page = event.target.textContent; //get content of button to be a selected page
     showPage(arrayListStudent, page);
     //active on a current page
-    let listLink = document.querySelectorAll('a');
+    let listLink = document.getElementsByTagName('a');
     for (let i in listLink)
       listLink[i].className = 'disable';
     event.target.className = 'active';
