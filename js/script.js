@@ -43,7 +43,7 @@ function displayFirstTen(list, num) {
 }
 
 showLink(arrayListStudent)
-displayFirstTen(arrayListStudent, student); //NOT nodeListStudent because for loop syntax for array
+displayFirstTen(arrayListStudent, student); //NOT nodeListStudent because the loop syntax above is for an array
 
 // A function to hide all of the items in the list
 function hideList(list) {
