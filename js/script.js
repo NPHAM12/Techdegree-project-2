@@ -59,19 +59,19 @@ function showPage(list, page) {
     for (let i = start; i < 10 * page; i++)
       list[i].style.display = "block";
   } else { // the last page. Eg, page = total page = 6
-    for (let i = start; i < 10 * totalPage; i++)
+    for (let i = start; i<list.length; i++)
       list[i].style.display = "block";
   }
 }
 
 //Create a click action on pagonation link
 ul.addEventListener('click', (event) => {
-  if (event.target.tagName === 'A') {
+  if (event.target.tagName == 'A') {
     let page = event.target.textContent; //get content of button to be a selected page
     showPage(arrayListStudent, page);
-    //active on a current page
+    // active on a current page
     let listLink = document.getElementsByTagName('a');
-    for (let i in listLink)
+    for (let i = 0; i<listLink.length; i++)
       listLink[i].className = 'disable';
     event.target.className = 'active';
   }
