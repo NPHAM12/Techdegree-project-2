@@ -15,16 +15,11 @@
     For example: if 10 or fewer results are returned, 0 or 1 pagination links are displayed. If 22 search results are returned, 3 pagination links are displayed.
   3. If no matches are found by the search, include a message in the HTML to tell the user there are no matches.
   
-
-1. Create a fucntion to add child nodes to "page" parent node and show pagination links to the page
-
-2. Create a function to shows first 10 students of the list on page
-
-3. Create a function to hide all of the students in the list
-
-4. Create a function to show 10 students in the list on each page
-
-5. Create a click action on pagonation link when clicking a selected page
+1. Create a fucntion to add child nodes to "page" parent node and show pagination links to the page.
+2. Create a function to shows first 10 students of the list on page.
+3. Create a function to hide all of the students in the list.
+4. Create a function to show 10 students in the list on each page.
+5. Create a click action on pagonation link when clicking a selected page.
 
 
 
