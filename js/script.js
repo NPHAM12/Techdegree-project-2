@@ -11,6 +11,9 @@ totalPage = Math.ceil(student / pageSize);
 const mainPage = document.getElementsByClassName("page")[0];
 let div = document.createElement('div');
 let ul = document.createElement('ul');
+const pageHeader = document.querySelector('.page-header');
+
+/*Pagination Links*/
 
 //A fucntion create and show pagination links to the page
 //a tree: PAGE - DIV - UL - LI - A
@@ -59,7 +62,7 @@ function showPage(list, page) {
     for (let i = start; i < 10 * page; i++)
       list[i].style.display = "block";
   } else { // the last page. Eg, page = total page = 6
-    for (let i = start; i<list.length; i++)
+    for (let i = start; i < list.length; i++)
       list[i].style.display = "block";
   }
 }
@@ -71,8 +74,45 @@ ul.addEventListener('click', (event) => {
     showPage(arrayListStudent, page);
     // active on a current page
     let listLink = document.getElementsByTagName('a');
-    for (let i = 0; i<listLink.length; i++)
+    for (let i = 0; i < listLink.length; i++)
       listLink[i].className = 'disable';
     event.target.className = 'active';
   }
 });
+
+/* SEARCH FUNCTION
+  filterStudents function takes the input value and checks if matching
+  the name values stored in the students variable. If not, student is hidden.*/
+function filterStudents(){
+  let filterInput;
+  filterInput = document.querySelector('INPUT').value.toUpperCase();
+  numberOfStudents = document.querySelectorAll(".student-details h3");
+  for (let i = 0; i < numberOfStudents.length; i++) {
+    name = numberOfStudents[i].textContent;
+    if (name.toUpperCase().indexOf(filterInput) <= -1) {
+      numberOfStudents[i].parentNode.parentNode.style.display = 'none';
+    } else {
+      numberOfStudents[i].parentNode.parentNode.style.display = '';
+    }
+  }
+}
+
+/* SEARCH INPUT */
+// Create a Searching option on page
+function findStudent() {
+  // Create a new div element for searching option
+  const div = document.createElement('div');
+  const pageHeader = document.querySelector('.page-header');
+  div.setAttribute('class', 'student-search');
+
+  // Add the text field to page
+  const findInput = document.createElement('input');
+  findInput.setAttribute('placeholder', 'Enter name here');
+  pageHeader.appendChild(div);
+  div.appendChild(findInput)
+
+  // Automatic searching when input value is in the search field, no need click on the button
+  const input = document.querySelector('INPUT');
+  input.addEventListener('keyup', filterStudents);
+}
+findStudent();
