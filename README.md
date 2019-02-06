@@ -1,7 +1,7 @@
-# Techdegree-project-2
-SJS project 2 - List Filter and Pagination
-Nguyen Pham
- 
+# List Filter and Pagination
+# Nguyen Pham
+
+<JavaScript>
 For meeting expectation
 
 1. Create a fucntion to add child nodes to "page" parent node and show pagination links to the page
