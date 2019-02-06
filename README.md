@@ -17,7 +17,7 @@
 3. Create a function to hide all of the students in the list.
 4. Create a function to show 10 students in the list on each page.
 5. Create a click action on pagonation link when clicking a selected page.
-6. Create a findStudent function to add search option (text field and button) to the main page
+6. Create a findStudent function to add search option (text field) to the main page
 7. Create an filterStudents function to take the input value and checks if matching
 the name values stored in the students variable. If not, student is hidden.
 
