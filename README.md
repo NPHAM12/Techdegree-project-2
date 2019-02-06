@@ -2,6 +2,9 @@
 # Nguyen Pham
 
 <JavaScript>
+  
+  Enhance the usability of a web page that contains a long list by employing JavaScript to dynamically divide the list into "pages".
+  
 For meeting expectation
 
 1. Create a fucntion to add child nodes to "page" parent node and show pagination links to the page
