@@ -3,6 +3,8 @@
 
 <JavaScript>
   
+   /////***************Update JS file for searching*********////
+
 *** Enhance the usability of a web page that contains a long list by employing JavaScript to dynamically divide the list into "pages" to make it easier for the user to find information and read the page.
 
 * Paganation Links:
@@ -20,6 +22,9 @@
 3. Create a function to hide all of the students in the list.
 4. Create a function to show 10 students in the list on each page.
 5. Create a click action on pagonation link when clicking a selected page.
+6. Create an arrow function filterStudents to take the input value and checks if matching
+the name values stored in the students variable. If not, student is hidden.
+7. Create a function updatePage to clear and update current users being displayed.
 
 
 
